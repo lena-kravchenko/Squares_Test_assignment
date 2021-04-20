@@ -1,7 +1,56 @@
-/* TODO: Add styles */
-$base-font-size: 24px;
-
 body {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: $base-font-size;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  min-height: 50vw;
 }
+
+.container {
+  padding: 0;
+  position: relative;
+  border: 1px solid #0093eb;
+}
+
+.cell {
+  background-color:#0093eb;
+  height: 50px;
+  width: 50px;
+}
+
+.button {
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  border: none;
+  position: absolute;
+  font-size: 24px;
+}
+
+.append-column {
+  background-color: #ecaf3d;
+  top: 2px;
+  left: 222px;
+}
+
+.remove-column {
+  background-color: #c5360b;
+  top: 10px;
+  right: 62px;
+  display: none;
+}
+
+.append-row {
+  background-color: #ecaf3d;
+  top: 222px;
+  left: 2px;
+}
+
+.remove-row {
+  background-color: #c5360b;
+  bottom: 62px;
+  left: 10px;
+  display: none;
+}
+
