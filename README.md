@@ -45,6 +45,6 @@ If you move the mouse out of square - delete buttons should disappear.
 
 ## Troubleshooting
 
-For any contributing or problem solving please contact me [to.lenakravchenko@gmail.com]
+If you have any suggestions or advice please contact me [to.lenakravchenko@gmail.com]
 
 
