@@ -1,6 +1,6 @@
-# Project Title Squares - Javascript
+# Squares - Javascript
 
-- [DEMO LINK]()
+- [DEMO LINK](https://lena-kravchenko.github.io/Squares_Test_assignment/)
 
 ## Technologies:
 HTML, CSS, Javascript (ES6)
