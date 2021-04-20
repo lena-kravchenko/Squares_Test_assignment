@@ -1,0 +1,47 @@
+{
+  "name": "vanilla-template",
+  "version": "1.0.0",
+  "description": "Template for vanilla (no framework) frontend projects",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rm -rf ./docs",
+    "build": "parcel build --out-dir docs --public-url ./ ./src/index.html",
+    "start": "parcel serve ./src/index.html --open",
+    "lint-js": "eslint ./src",
+    "lint-js:fix": "eslint ./src --fix",
+    "lint-styles": "stylelint **/*.css **/*.scss",
+    "lint-styles:fix": "stylelint --fix **/*.css **/*.scss",
+    "lint": "concurrently \"npm:lint-js\" \"npm:lint-styles\"",
+    "lint:fix": "concurrently \"npm:lint-js:fix\" \"npm:lint-styles:fix\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lena-kravchenko/vanilla-template.git"
+  },
+  "keywords": [
+    "template",
+    "boilerplate",
+    "html",
+    "javascript",
+    "parcel",
+    "eslint"
+  ],
+  "author": "LenaKravchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lena-kravchenko/vanilla-template/issues"
+  },
+  "homepage": "https://github.com/lena-kravchenko/vanilla-template#readme",
+  "devDependencies": {
+    "concurrently": "^6.0.2",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^6.0.0",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.10",
+    "stylelint": "^13.12.0",
+    "stylelint-config-sass-guidelines": "^8.0.0"
+  }
+}
