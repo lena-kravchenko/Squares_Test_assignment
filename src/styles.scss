@@ -4,13 +4,13 @@ body {
   display: flex;
   justify-content: center;
   margin: 0;
-  min-height: 50vw;
+//  min-height: 50vw;
 }
 
 .container {
-  padding: 0;
   position: relative;
-  border: 1px solid #64a9e0;
+  padding: 60px;
+//  border: 1px solid #64a9e0;
 }
 
 td {
@@ -28,25 +28,29 @@ td {
   position: absolute;
   font-size: 24px;
   outline: none;
+  display: block;
+  padding: 0;
+  transition: background-color 0.2s ease;  
 
   &:hover {
     box-shadow: 0 0 5px 2px #64a9e0;
   }
 
   &[disabled] {
-    background: #c1c1c1;
+    background-color: #c1c1c1;
+    transition: background-color 0.2s ease;
   }
 
   &[disabled]:hover {
-    background: #c1c1c1;
+    background-color: #c1c1c1;
     cursor: not-allowed;
   }
 }
 
 .append-column {
   background-color: #e6a83b;
-  top: 2px;
-  left: 222px;
+  top: 62px;
+  right: 10px;
   transition: background-color 0.2s ease;
 
   &:hover {
@@ -56,10 +60,10 @@ td {
 
 .remove-column {
   background-color: #9f2019;
-  top: -54px;
-  left: 4px;
+  top: 10px;
+  right: 62px;
   transition: background-color 0.2s ease;
-  //display: none;
+  display: none;
 
   &:hover {
     background-color: #af423c;
@@ -68,8 +72,8 @@ td {
 
 .append-row {
   background-color: #e6a83b;
-  top: 222px;
-  left: 2px;
+  bottom: 10px;
+  left: 62px;
   transition: background-color 0.2s ease;
 
   &:hover {
@@ -79,10 +83,10 @@ td {
 
 .remove-row {
   background-color: #9f2019;
-  top: 2px;
-  left: -54px;
+  bottom: 62px;
+  left: 10px;
   transition: background-color 0.2s ease;
-  //display: none;
+  display: none;
 
   &:hover {
     background-color: #af423c;
