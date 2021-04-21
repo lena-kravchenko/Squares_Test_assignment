@@ -41,9 +41,9 @@ td {
 
 .remove-column {
   background-color: #9f2019;
-  top: 10px;
-  right: 62px;
-  display: none;
+  top: -54px;
+  left: 4px;
+//  display: none;
 }
 
 .append-row {
@@ -54,8 +54,8 @@ td {
 
 .remove-row {
   background-color: #9f2019;
-  bottom: 62px;
-  left: 10px;
-  display: none;
+  top: 2px;
+  left: -54px;
+// display: none;
 }
 

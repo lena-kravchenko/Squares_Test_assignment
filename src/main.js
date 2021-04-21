@@ -9,24 +9,22 @@ const removeRowButton = document.querySelector('.remove-row');
 const appendColumnButton = document.querySelector('.append-column');
 const removeColumnButton = document.querySelector('.remove-column');
 
-// const minCountOfRowsOrColumns = 1;
+const minCountOfRowsOrColumns = 1;
 
 function appendRow() {
   const row = tbody.children[0].cloneNode(true);
 
   tbody.append(row);
 
-//  removeRowButton.disabled = false;
+  removeRowButton.disabled = false;
 }
 
 function removeRow() {
   tbody.lastElementChild.remove();
 
-//  if (tbody.children.length <= minCountOfRowsOrColumns) {
-//    removeRowButton.disabled = true;
-//  }
-
-//  appendRowButton.disabled = false;
+  if (tbody.children.length === minCountOfRowsOrColumns) {
+    removeRowButton.disabled = true;
+  }
 }
 
 function appendColumn() {
@@ -36,9 +34,7 @@ function appendColumn() {
     child.append(column);
   });
 
-//  if (rows.children.length >= minCountOfRowsOrColumns) {
-//    removeColumnButton.disabled = false;
-//  }
+  removeColumnButton.disabled = false;
 }
 
 function removeColumn() {
@@ -46,9 +42,9 @@ function removeColumn() {
     child.lastElementChild.remove();
   });
 
-//  if (rows.children.length <= minCountOfRowsOrColumns) {
-//    removeColumnButton.disabled = true;
-//  }
+  if (rows.children.length <= minCountOfRowsOrColumns) {
+    removeColumnButton.disabled = true;
+  }
 }
 
 function showRemoveButtons() {
@@ -59,6 +55,12 @@ function showRemoveButtons() {
 function hideRemoveButtons() {
   removeRowButton.style.display = 'none';
   removeColumnButton.style.display = 'none';
+}
+
+function moveRemoveRowButton() {
+  removeRowButton.style.position = 'relative';
+
+  removeRowButton.style.top = tbody.clientHeight / 5;
 }
 
 appendRowButton.addEventListener('click', appendRow);
