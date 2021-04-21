@@ -2,7 +2,7 @@
 
 const tbody = document.querySelector('tbody');
 const rows = document.querySelector('tr');
-const cells = document.querySelectorAll('.cell');
+const cells = document.querySelectorAll('td');
 
 const appendRowButton = document.querySelector('.append-row');
 const removeRowButton = document.querySelector('.remove-row');
@@ -66,5 +66,14 @@ removeRowButton.addEventListener('click', removeRow);
 appendColumnButton.addEventListener('click', appendColumn);
 removeColumnButton.addEventListener('click', removeColumn);
 
-tbody.addEventListener('mouseover', showRemoveButtons);
-tbody.addEventListener('mouseout', hideRemoveButtons);
+document.addEventListener('mouseover', event => {
+  if ([...cells].includes(event.target)) {
+    showRemoveButtons();
+  }
+});
+
+document.addEventListener('mouseout', event => {
+  if ([...cells].includes(event.target)) {
+    hideRemoveButtons();
+  }
+});
