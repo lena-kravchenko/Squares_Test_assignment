@@ -1,35 +1,33 @@
 body {
-  align-items: center;
   box-sizing: border-box;
+  margin: 0;
   display: flex;
   justify-content: center;
-  margin: 0;
-//  min-height: 50vw;
+  align-items: center;
 }
 
 .container {
-  position: relative;
   padding: 60px;
-//  border: 1px solid #64a9e0;
+  position: relative;
 }
 
 td {
-  background-color:#64a9e0;
   height: 50px;
   width: 50px;
+  background-color:#64a9e0;
 }
 
 .button {
-  color: #fff;
-  cursor: pointer;
   height: 50px;
   width: 50px;
-  border: none;
+  padding: 0;
+  display: block;
   position: absolute;
+  color: #fff;
+  cursor: pointer;
+  border: none;
   font-size: 24px;
   outline: none;
-  display: block;
-  padding: 0;
   transition: background-color 0.2s ease;  
 
   &:hover {
@@ -48,9 +46,9 @@ td {
 }
 
 .append-column {
-  background-color: #e6a83b;
   top: 62px;
   right: 10px;
+  background-color: #e6a83b;
   transition: background-color 0.2s ease;
 
   &:hover {
@@ -59,11 +57,11 @@ td {
 }
 
 .remove-column {
-  background-color: #9f2019;
+  display: none;
   top: 10px;
   right: 62px;
+  background-color: #9f2019;
   transition: background-color 0.2s ease;
-  display: none;
 
   &:hover {
     background-color: #af423c;
@@ -71,9 +69,9 @@ td {
 }
 
 .append-row {
-  background-color: #e6a83b;
   bottom: 10px;
   left: 62px;
+  background-color: #e6a83b;
   transition: background-color 0.2s ease;
 
   &:hover {
@@ -82,11 +80,11 @@ td {
 }
 
 .remove-row {
-  background-color: #9f2019;
+  display: none;
   bottom: 62px;
   left: 10px;
+  background-color: #9f2019;
   transition: background-color 0.2s ease;
-  display: none;
 
   &:hover {
     background-color: #af423c;

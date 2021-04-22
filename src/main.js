@@ -18,15 +18,12 @@ function appendRow() {
   tbody.append(row);
 
   removeRowButton.disabled = false;
+  removeRowButton.style.display = 'block';
 }
 
 function removeRow() {
   tbody.lastElementChild.remove();
   removeRowButton.style.display = 'none';
-
-  if (tbody.children.length === minAmountOfRowsOrColumns) {
-    removeRowButton.disabled = true;
-  }
 }
 
 function appendColumn() {
@@ -35,8 +32,6 @@ function appendColumn() {
 
     child.append(column);
   });
-
-  removeColumnButton.disabled = false;
 }
 
 function removeColumn() {
@@ -44,15 +39,16 @@ function removeColumn() {
     child.lastElementChild.remove();
   });
   removeColumnButton.style.display = 'none';
-
-  if (rows.children.length <= minAmountOfRowsOrColumns) {
-    removeColumnButton.disabled = true;
-  }
 }
 
 function showRemoveButtons() {
-  removeRowButton.style.display = 'block';
-  removeColumnButton.style.display = 'block';
+  if (rows.children.length > minAmountOfRowsOrColumns) {
+    removeColumnButton.style.display = 'block';
+  }
+
+  if (tbody.children.length > minAmountOfRowsOrColumns) {
+    removeRowButton.style.display = 'block';
+  }
 }
 
 function hideRemoveButtons() {
